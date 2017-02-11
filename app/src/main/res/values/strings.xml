@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CongratulationsApp_up</string>
+    <string name="congrats">CONGRATULATIONS</string>
+    <string name="exams">on successfully completing your exams</string>
+    <string name="now">NOW GO</string>
+    <string name="adventure">on an adventure!</string>
+    <string name="go_button">GO!</string>
+
+</resources>

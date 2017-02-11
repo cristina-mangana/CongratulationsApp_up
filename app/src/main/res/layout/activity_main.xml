@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.congratulationsapp_up.MainActivity">
+
+    <!--Fonts folder created by adding a directory inside assets folder-->
+    <!--Texts included in strings.xml-->
+
+    <pl.droidsonroids.gif.GifImageView
+        style="@style/GifStyle"
+        android:src="@drawable/animation3" />
+
+<!--    <ImageView
+        android:id="@+id/up_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/upimage" /> -->
+
+    <TextView
+        android:id="@+id/congrats"
+        style="@style/TextViewStyle"
+        android:padding="@dimen/normal_padding"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/big_textSize"
+        android:text="@string/congrats"/>
+
+    <TextView
+        android:id="@+id/exams"
+        style="@style/TextViewStyle"
+        android:layout_below="@+id/congrats"
+        android:paddingLeft="@dimen/large_padding"
+        android:paddingRight="@dimen/large_padding"
+        android:textSize="@dimen/small_textSize"
+        android:text="@string/exams"/>
+
+    <TextView
+        android:id="@+id/adventure"
+        style="@style/TextViewStyle"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:paddingBottom="@dimen/large_padding"
+        android:textSize="@dimen/small_textSize"
+        android:text="@string/adventure"/>
+
+    <TextView
+        android:id="@+id/now"
+        style="@style/TextViewStyle"
+        android:layout_above="@id/adventure"
+        android:onClick="animation"
+        android:paddingLeft="@dimen/normal_padding"
+        android:paddingRight="@dimen/normal_padding"
+        android:layout_marginBottom="@dimen/negative_padding"
+        android:textSize="@dimen/big_textSize"
+        android:text="@string/now" />
+
+    <!-- <Button
+        android:id="@+id/go_button"
+        android:background="#8082bf58"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="animation"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textSize="14sp"
+        android:textAllCaps="true"
+        android:text="@string/go_button" /> -->
+
+</RelativeLayout>
