@@ -32,7 +32,17 @@ public class MainActivity extends AppCompatActivity {
         textViewExams.setTypeface(typeFaceComingSoon);
         textViewAdventure.setTypeface(typeFaceComingSoon);
         textViewNow.setTypeface(typeFaceComingSoon);
+
+        // Restore state from saved instance
+        if (savedInstanceState != null) {
+            randomColor = savedInstanceState.getInt("color");
+            // Apply the color to the TextView
+            textViewCongrats.setTextColor(randomColor);
+        }
     }
+
+    int randomColor = Color.parseColor("#000000");
+
     //Change color randomly when clicking
     public int getRandomColor(){
         Random rnd = new Random();
@@ -41,7 +51,16 @@ public class MainActivity extends AppCompatActivity {
     //Function onClick
     public void animation (View view){
         TextView textViewAnimation = (TextView) findViewById(R.id.congrats);
-        textViewAnimation.setTextColor(getRandomColor());
+        randomColor = getRandomColor();
+        textViewAnimation.setTextColor(randomColor);
+    }
+
+    // Fires when a configuration change occurs and fragment needs to save state
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save custom values into the bundle
+        savedInstanceState.putInt("color", randomColor);
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
     }
 
 }

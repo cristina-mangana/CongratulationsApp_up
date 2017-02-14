@@ -11,7 +11,7 @@
 
     <pl.droidsonroids.gif.GifImageView
         style="@style/GifStyle"
-        android:src="@drawable/animation3" />
+        android:src="@drawable/animation4" />
 
 <!--    <ImageView
         android:id="@+id/up_image"
